@@ -64,5 +64,8 @@ VkSdk.prototype.getFingerPrintVkSdk = function(successCallback, errorCallback) {
 VkSdk.prototype.logout = function(successCallback, errorCallback) {
     cordova.exec(successCallback, errorCallback, "VkSdk", "logout");
 };
+VkSdk.prototype.wall_post = function(messageOrParams, successCallback, errorCallback) {
+    cordova.exec(successCallback, errorCallback, "VkSdk", "wall_post", [messageOrParams]);
+};
 
 module.exports = new VkSdk();
